@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Skincare"></activity>
-        <activity android:name=".MakeupActivity" />
+        <activity android:name=".MakeupActivity"></activity>
+        <activity android:name=".signUpActivity" />
+        <activity android:name=".SkincareActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

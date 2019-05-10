@@ -3,7 +3,7 @@ package com.example.beautywithin;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Skincare extends AppCompatActivity {
+public class SkincareActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
