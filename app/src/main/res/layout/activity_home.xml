@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +8,8 @@
     android:background="@drawable/beauty">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="218dp"
         android:paddingTop="180dp"
         android:text="choose a category!"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,25 +20,25 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/makeupButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="MAKE-UP"
+        android:layout_marginBottom="61dp"
         android:background="@color/primary_light"
+        android:text="MAKE-UP"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="519dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/skincareButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="SKINCARE"
+        android:layout_marginBottom="136dp"
         android:background="@color/primary_light"
+        android:text="SKINCARE"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="607dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
