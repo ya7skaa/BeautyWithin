@@ -3,11 +3,11 @@ package com.example.beautywithin;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Makeup extends AppCompatActivity {
+public class Skincare extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_makeup);
+        setContentView(R.layout.activity_skincare);
     }
 }

@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mskincareButton = (Button) findViewById(R.id.skincareButton);
+        mskincareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SkincareActivity.class);
+                startActivity(intent);
+            }
+        });
 
         new Handler() .postDelayed(new Runnable(){
 
