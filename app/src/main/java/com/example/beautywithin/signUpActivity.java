@@ -1,5 +1,6 @@
 package com.example.beautywithin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +26,10 @@ public class signUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String location = mLocationEditText.getText().toString();
+
                 Toast.makeText(signUpActivity.this, "Welcome", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                startActivity(intent);
 
             }
         });
