@@ -7,6 +7,19 @@
     tools:context=".signUpActivity">
 
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationEditText"
+        android:background="@color/icons"
+        android:layout_above="@+id/signUpButton"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:hint="Enter Zip Code"
+        android:layout_centerHorizontal="true" />
+
+
+
     <Button
         android:id="@+id/skincareButton"
         android:layout_width="152dp"
