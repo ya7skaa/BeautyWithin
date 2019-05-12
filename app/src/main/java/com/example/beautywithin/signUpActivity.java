@@ -16,13 +16,16 @@ public class signUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+
+        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
         msignUpButton = (Button) findViewById(R.id.signUpButton);
 
 
         msignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
+                String location = mLocationEditText.getText().toString();
+                Toast.makeText(signUpActivity.this, "Welcome", Toast.LENGTH_LONG).show();
 
             }
         });
