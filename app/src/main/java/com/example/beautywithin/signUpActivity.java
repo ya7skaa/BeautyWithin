@@ -28,7 +28,7 @@ public class signUpActivity extends AppCompatActivity {
                 String location = mLocationEditText.getText().toString();
 
                 Toast.makeText(signUpActivity.this, "Welcome", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                Intent intent = new Intent(signUpActivity.this, HomeActivity.class);
                 startActivity(intent);
 
             }
