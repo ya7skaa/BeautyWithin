@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
     private Button mmakeUpButton;
+    private Button mskincareButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,18 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        mskincareButton = (Button) findViewById(R.id.skincareButton);
+        mskincareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, SkincareActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }
