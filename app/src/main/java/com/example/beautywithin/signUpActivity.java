@@ -8,9 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class signUpActivity extends AppCompatActivity {
-    private Button msignUpButton;
-    private EditText mLocationEditText;
+
+    @BindView(R.id.signUpButton) Button msignUpButton;
+    @BindView(R.id.locationEditText) EditText mLocationEditText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +23,7 @@ public class signUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
 
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-        msignUpButton = (Button) findViewById(R.id.signUpButton);
-
+        ButterKnife.bind(this);
 
         msignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

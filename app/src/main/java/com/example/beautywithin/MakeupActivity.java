@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MakeupActivity extends AppCompatActivity {
-    private ListView mListView;
+    @BindView(R.id.listView) ListView mListView;
 
     private String[] makeups = new String[] {"All Day Luminous Foundation","Stunna Lip Paint", "Better Than Sex", "All Nighter Setting Spray","Studio Fix Longwear Foundation","Infallible Proglow Foundation", "Telepathy Super Shock Shadow"};
 
@@ -18,7 +21,7 @@ public class MakeupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_makeup);
 
-        mListView = (ListView) findViewById(R.id.listView);
+        ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,makeups );
         mListView.setAdapter(adapter);
