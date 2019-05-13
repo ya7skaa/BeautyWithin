@@ -9,15 +9,18 @@
 
 
     <TextView
+        android:id="@+id/intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="100dp"
         android:text="BeautyWithin"
-        android:textSize="40sp"
-        android:visibility="visible"
         android:textColor="@color/accent"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="200dp"
-        />
+        android:textSize="80sp"
+        android:visibility="visible" />
 
 
 

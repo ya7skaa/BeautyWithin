@@ -12,8 +12,8 @@ import butterknife.ButterKnife;
 public class MakeupActivity extends AppCompatActivity {
     @BindView(R.id.listView) ListView mListView;
 
-    private String[] makeups = new String[] {"All Day Luminous Foundation","Stunna Lip Paint", "Better Than Sex", "All Nighter Setting Spray","Studio Fix Longwear Foundation","Infallible Proglow Foundation", "Telepathy Super Shock Shadow"};
-
+    private String[] makeups = new String[] {"All Day Luminous Foundation","Stunna Lip Paint", "Better Than Love Mascara", "All Nighter Setting Spray","Studio Fix Longwear Foundation","Infallible Proglow Foundation", "Telepathy Super Shock Shadow","Teint Idole Foundation","Bad Gal Bang Mascara","Translucent Setting Powder","Shape Tape Concealer"};
+    private String[] brands = new String[]{"Nars","Fenty Beauty","Two Faced","Urban Decay","MAC Cosmetics","L'Oreal Paris","ColorPop Cosmetics","Lancome","Benefit Cosmetics","Laura Mercier","Tarte Cosmetics"};
 
 
     @Override

@@ -1,11 +1,13 @@
 package com.example.beautywithin;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -15,6 +17,9 @@ public class signUpActivity extends AppCompatActivity {
 
     @BindView(R.id.signUpButton) Button msignUpButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
+    @BindView(R.id.intro) TextView mAppNameTextView;
+
+
 
 
     @Override
@@ -24,6 +29,9 @@ public class signUpActivity extends AppCompatActivity {
 
 
         ButterKnife.bind(this);
+
+        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/Beauty.ttf");
+        mAppNameTextView.setTypeface(ostrichFont);
 
         msignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

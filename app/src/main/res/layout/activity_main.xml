@@ -10,10 +10,16 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/splash"
+        android:layout_width="258dp"
+        android:layout_height="253dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="105dp"
+        android:layout_marginRight="105dp"
         android:text="BeautyWithin"
-        android:textSize="40sp"
+        android:textColor="@color/accent"
+        android:textSize="80sp"
         android:visibility="visible" />
 
 </RelativeLayout>
