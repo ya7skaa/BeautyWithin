@@ -11,11 +11,11 @@ are and when thr specific buttons are clicked on they show a list of the product
 
 ![](screenshots/screenshot1.png)
 ### This is the splash screen
-![](screenshots/screenshot2.png)
+![](screenshots/s3.png)
 ### Here the app request for you to register using your name
-![](screenshots/screenshot3.png)
+![](screenshots/s2.png)
 ### Here the app welcomes you and shows you the 2 categories you can pic from
-![](screenshots/screenshot4.png)
+![](screenshots/s4.png)
 ### Here's a list of items in makeup category
 
 
