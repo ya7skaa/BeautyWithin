@@ -23,7 +23,7 @@ public class MakeupActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,makeups );
+        MakeupArrayAdapter adapter = new  MakeupArrayAdapter(this, android.R.layout.simple_list_item_1,makeups,brands );
         mListView.setAdapter(adapter);
 
 

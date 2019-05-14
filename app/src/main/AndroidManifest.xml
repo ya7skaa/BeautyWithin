@@ -9,17 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MakeupActivity"></activity>
-        <activity android:name=".signUpActivity" />
-        <activity android:name=".SkincareActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MakeupActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.beautywithin.HomeActivity">
+            </meta-data> />
+        </activity>
+        <activity android:name=".signUpActivity" android:theme="@style/NoActionBarTheme" ></activity>
+        <activity android:name=".SkincareActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.beautywithin.HomeActivity">
+            </meta-data> />
+        </activity>
+        <activity android:name=".HomeActivity"><meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.beautywithin.signUpActivity">
+        </meta-data> </activity>
+        <activity android:name=".MainActivity" android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-
+        ButterKnife.bind(this);
 
         mmakeUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,8 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         mskincareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, SkincareActivity.class);
-                startActivity(intent);
+                Toast.makeText(HomeActivity.this, "coming soon!", Toast.LENGTH_LONG).show();
             }
         });
 

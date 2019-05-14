@@ -18,9 +18,9 @@ public class MakeupArrayAdapter extends ArrayAdapter {
 
         @Override
         public Object getItem(int position) {
-            String restaurant = mmakeups[position];
-            String cuisine = mbrands[position];
-            return String.format("%s \nServes great: %s", mmakeups, mbrands);
+            String makeups = mmakeups[position];
+            String brands = mbrands[position];
+            return String.format("%s \nBRand: %s", makeups, brands);
         }
 
         @Override
