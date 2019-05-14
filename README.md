@@ -14,7 +14,9 @@ are and when thr specific buttons are clicked on they show a list of the product
 ![](screenshots/screenshot2.png)
 ### Here the app request for you to register using your name
 ![](screenshots/screenshot3.png)
-### Here the app welcomes you and shows you all the days news
+### Here the app welcomes you and shows you the 2 categories you can pic from
+![](screenshots/screenshot4.png)
+### Here's a list of items in makeup category
 
 
 
