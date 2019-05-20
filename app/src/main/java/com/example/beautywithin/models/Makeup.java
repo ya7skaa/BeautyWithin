@@ -1,6 +1,7 @@
 package com.example.beautywithin.models;
 
 public class Makeup {
+    private String mName;
     private String mProductType;
     private String mProductCategory;
     private String mBrand;
@@ -11,7 +12,8 @@ public class Makeup {
 
 
 
-    public Makeup(String mProductType, String mProductCategory, String mBrand,String mRating,String mDescription, int mPrice,String mImageUrl) {
+    public Makeup(String mName,String mProductType, String mProductCategory, String mBrand,String mRating,String mDescription, int mPrice,String mImageUrl) {
+        this.mName = mName;
         this.mProductType = mProductType;
         this.mProductCategory = mProductCategory;
         this.mBrand = mBrand;
@@ -20,6 +22,11 @@ public class Makeup {
         this.mPrice = mPrice;
         this.mImageUrl = mImageUrl;
 
+
+    }
+
+    public String getmName() {
+        return mName;
     }
 
     public String getmProductType() {

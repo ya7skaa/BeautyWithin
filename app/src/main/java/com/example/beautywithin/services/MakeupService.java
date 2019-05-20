@@ -1,4 +1,4 @@
-package com.example.beautywithin.ui.services;
+package com.example.beautywithin.services;
 import com.example.beautywithin.Constants;
 import com.example.beautywithin.models.Makeup;
 
@@ -18,7 +18,7 @@ import okhttp3.Response;
 
 public class MakeupService {
 
-    public ArrayList<Makeup> processResuls(Response response) {
+    public static ArrayList<Makeup> processResults(Response response) {
         ArrayList<Makeup> makeups = new ArrayList<>();
         try {
             String jsonData = response.body().string();
@@ -27,6 +27,7 @@ public class MakeupService {
             if (response.isSuccessful()) {
                 for (int i = 0; i < makeupJSON.length(); i++) {
                     JSONObject makeupsJSON = makeupJSON.getJSONObject(i);
+                    String name = makeupsJSON.getString("name");
                     String product = makeupsJSON.getString("product_type");
                     String brand = makeupsJSON.getString("brand");
                     String category = makeupsJSON.getString("product_category");
@@ -36,7 +37,7 @@ public class MakeupService {
                     String imageUrl = makeupsJSON.getString("image_url");
 
 
-                    Makeup makeup = new Makeup(product, brand, category, rating, description, price, imageUrl);
+                    Makeup makeup = new Makeup(name,product, brand, category, rating, description, price, imageUrl);
                     makeups.add(makeup);
                 }
 
