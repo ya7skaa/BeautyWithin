@@ -1,14 +1,13 @@
-package com.example.beautywithin;
+package com.example.beautywithin.ui;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.beautywithin.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                Intent homeIntent = new Intent(MainActivity.this,signUpActivity.class);
+                Intent homeIntent = new Intent(MainActivity.this, signUpActivity.class);
                 startActivity(homeIntent);
                 finish ();
 

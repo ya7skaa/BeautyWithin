@@ -7,7 +7,7 @@
     android:background="@drawable/beauty"
     android:paddingTop="125dp"
     android:paddingLeft="45dp"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <TextView
         android:id="@+id/splash"

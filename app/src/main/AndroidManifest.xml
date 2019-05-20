@@ -10,25 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MakeupActivity">
+        <activity android:name=".ui.MakeupActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.beautywithin.HomeActivity">
+                android:value="com.example.beautywithin.ui.HomeActivity">
             </meta-data>
         </activity>
-        <activity android:name=".signUpActivity" android:theme="@style/NoActionBarTheme" ></activity>
-        <activity android:name=".SkincareActivity">
+        <activity android:name=".ui.signUpActivity" android:theme="@style/NoActionBarTheme" ></activity>
+        <activity android:name=".ui.SkincareActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.beautywithin.HomeActivity">
+                android:value="com.example.beautywithin.ui.HomeActivity">
             </meta-data>
 
         </activity>
-        <activity android:name=".HomeActivity"><meta-data
+        <activity android:name=".ui.HomeActivity"><meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.beautywithin.signUpActivity">
+            android:value="com.example.beautywithin.ui.signUpActivity">
         </meta-data> </activity>
-        <activity android:name=".MainActivity" android:theme="@style/NoActionBarTheme">
+        <activity android:name=".ui.MainActivity" android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

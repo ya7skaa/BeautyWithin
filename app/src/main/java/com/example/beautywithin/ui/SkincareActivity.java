@@ -1,7 +1,9 @@
-package com.example.beautywithin;
+package com.example.beautywithin.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.beautywithin.R;
 
 public class SkincareActivity extends AppCompatActivity {
 
