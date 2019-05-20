@@ -1,13 +1,19 @@
 package com.example.beautywithin;
+import okhttp3.Call;
+import okhttp3.Callback;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.Response;
 
 public class MakeupActivity extends AppCompatActivity {
     @BindView(R.id.listView) ListView mListView;
@@ -29,5 +35,26 @@ public class MakeupActivity extends AppCompatActivity {
 
 
 
+    }
+    private void getMakeup() {
+        final MakeupService makeupService = new MakeupService ();
+        MakeupService.makeups(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+                    String jsonData = response.body().string();
+                    Log.v(TAG, jsonData);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 }
