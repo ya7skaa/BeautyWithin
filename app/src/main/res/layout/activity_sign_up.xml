@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="47dp"
-        android:layout_marginLeft="47dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
         android:layout_marginTop="100dp"
         android:text="BeautyWithin"
         android:textColor="@color/accent"
@@ -23,25 +23,20 @@
         android:visibility="visible" />
 
 
-
-    <EditText
-        android:id="@+id/locationEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/signUpButton"
-        android:layout_alignLeft="@+id/signUpButton"
-        android:layout_alignEnd="@+id/signUpButton"
-        android:layout_alignRight="@+id/signUpButton"
-        android:layout_alignBottom="@+id/signUpButton"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:layout_marginBottom="71dp"
-        android:background="@color/icons"
-        android:hint="sign up!"
-        android:padding="5dp" />
+    <!--<EditText-->
+        <!--android:id="@+id/locationEditText"-->
+        <!--android:layout_width="148dp"-->
+        <!--android:layout_height="59dp"-->
+        <!--android:layout_alignStart="@+id/signUpButton"-->
+        <!--android:layout_alignLeft="@+id/signUpButton"-->
+        <!--android:layout_alignBottom="@+id/signUpButton"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_marginBottom="60dp"-->
+        <!--android:background="@color/icons"-->
+        <!--android:hint="sign out!"-->
+        <!--android:padding="5dp" />-->
 
 
 
@@ -53,7 +48,7 @@
         android:layout_marginTop="350dp"
         android:background="@color/accent"
         android:textColor="@color/primary_dark"
-        android:text="sign in"
+        android:text="sign Out"
 
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="607dp" />

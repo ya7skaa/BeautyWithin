@@ -10,4 +10,8 @@
 
     <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
 
+    <style name="MyTheme"  parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/accent</item>
+    </style>
+
 </resources>
