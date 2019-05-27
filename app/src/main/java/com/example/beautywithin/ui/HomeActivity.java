@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         mmakeUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MakeupActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MakeupListActivity.class);
                 startActivity(intent);
             }
         });

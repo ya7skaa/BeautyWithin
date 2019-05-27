@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -30,14 +31,14 @@ public class MakeupService {
                     String name = makeupsJSON.getString("name");
                     String product = makeupsJSON.getString("product_type");
                     String brand = makeupsJSON.getString("brand");
-                    String category = makeupsJSON.getString("product_category");
-                    String rating = makeupsJSON.getString("rating");
+                    String category = makeupsJSON.getString("category");
+                    //String rating = makeupsJSON.getString("rating");
                     String description = makeupsJSON.getString("description");
-                    int price = makeupsJSON.getInt("price");
-                    String imageUrl = makeupsJSON.getString("image_url");
+                    String price = makeupsJSON.getString("price");
+                    String imageUrl = makeupsJSON.getString("image_link");
 
 
-                    Makeup makeup = new Makeup(name,product, brand, category, rating, description, price, imageUrl);
+                    Makeup makeup = new Makeup(name,product, brand, category, description, price, imageUrl);
                     makeups.add(makeup);
                 }
 
@@ -47,12 +48,7 @@ public class MakeupService {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
+//
 
         }
         return makeups;
@@ -62,7 +58,7 @@ public class MakeupService {
 
     public static void makeups( Callback callback) {
 
-        OkHttpClient client = new OkHttpClient.Builder()
+        OkHttpClient client = new OkHttpClient.Builder().readTimeout(5, TimeUnit.MINUTES)
                 .build();
 
 

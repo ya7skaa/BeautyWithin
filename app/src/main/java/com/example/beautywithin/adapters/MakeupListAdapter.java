@@ -51,7 +51,6 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
             @BindView(R.id.makeupNameTextView) TextView mNameTextView;
             @BindView(R.id.categoryTextView) TextView mCategoryTextView;
             @BindView(R.id.priceTextView) TextView mPriceTextView;
-            @BindView(R.id.ratingTextView) TextView mRatingTextView;
 
             private Context mContext;
 
@@ -63,10 +62,10 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
 
             public void bindMakeup(Makeup makeup) {
                 Picasso.get().load(makeup.getmImageUrl()).into(mMakeupImageView);
-                mNameTextView.setText(makeup. getmName());
-                mCategoryTextView.setText(makeup.getmProductType());
-                mPriceTextView.setText(makeup.getmPrice());
-                mRatingTextView.setText("Rating: " + makeup.getmRating() + "/5");
+                mNameTextView.setText(makeup.getmName());
+            mCategoryTextView.setText(makeup.getmProductType());
+            mPriceTextView.setText(String.format("%s $", makeup.getmPrice()));
+              // mRatingTextView.setText("Rating: " + makeup.getmRating() + "/5");
             }
     }
 }

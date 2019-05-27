@@ -6,11 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
-import com.example.beautywithin.MakeupArrayAdapter;
 import com.example.beautywithin.adapters.MakeupListAdapter;
 import com.example.beautywithin.services.MakeupService;
 import com.example.beautywithin.R;
@@ -23,10 +19,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import okhttp3.Response;
 
-public class MakeupActivity extends AppCompatActivity {
+public class MakeupListActivity extends AppCompatActivity {
 
     private ArrayList<Makeup> makeups = new ArrayList<>();
-    public static final String TAG = MakeupActivity.class.getSimpleName();
+    public static final String TAG = MakeupListActivity.class.getSimpleName();
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     private MakeupListAdapter mAdapter;
 
@@ -40,14 +36,15 @@ public class MakeupActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-
+        getMakeup();
 
 
 
     }
-    private void getMakeup(Call call ,Response response) {
+    private void getMakeup() {
         final MakeupService makeupService = new MakeupService ();
-        MakeupService.makeups(new Callback() {
+
+        makeupService.makeups(new Callback() {
 
             @Override
             public void onFailure(Call call, IOException e) {
@@ -58,15 +55,17 @@ public class MakeupActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) {
                 makeups = MakeupService.processResults(response);
 
-                MakeupActivity.this.runOnUiThread(new Runnable() {
+                MakeupListActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         mAdapter = new MakeupListAdapter(getApplicationContext(), makeups);
                         mRecyclerView.setAdapter(mAdapter);
                         RecyclerView.LayoutManager layoutManager =
-                                new LinearLayoutManager(MakeupActivity.this);
+                                new LinearLayoutManager(MakeupListActivity.this);
                         mRecyclerView.setLayoutManager(layoutManager);
                         mRecyclerView.setHasFixedSize(true);
+
+                        System.out.println(makeups);
                     }
                 });
             }

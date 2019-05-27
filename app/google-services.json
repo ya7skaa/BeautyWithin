@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "764929168187",
+    "firebase_url": "https://beautywithin-32815.firebaseio.com",
+    "project_id": "beautywithin-32815",
+    "storage_bucket": "beautywithin-32815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764929168187:android:e98cf253c9a13487",
+        "android_client_info": {
+          "package_name": "com.example.beautywithin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764929168187-7opjiqguvb3okadalhjbqpjarh1279r4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.beautywithin",
+            "certificate_hash": "f91c7b9f7b9cf8085069169692d6102d72dcd3f8"
+          }
+        },
+        {
+          "client_id": "764929168187-df0ogqrccg35nlphppc28kbb6shn1ftk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqgf1_qqSbqP-1eo9NcHlej_ms2m61qQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764929168187-df0ogqrccg35nlphppc28kbb6shn1ftk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
