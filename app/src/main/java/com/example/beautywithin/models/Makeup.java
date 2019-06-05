@@ -8,9 +8,10 @@ public class Makeup {
     private String mDescription;
     private String mPrice;
     private String mImageUrl;
+    private String mWebsiteLink;
 
 
-    public Makeup(String mName, String mProductType, String mProductCategory, String mBrand, String mDescription, String mPrice, String mImageUrl) {
+    public Makeup(String mName, String mProductType, String mProductCategory, String mBrand, String mDescription, String mPrice, String mImageUrl,String mWebsiteLink) {
         this.mName = mName;
         this.mProductType = mProductType;
         this.mProductCategory = mProductCategory;
@@ -18,6 +19,7 @@ public class Makeup {
         this.mDescription = mDescription;
         this.mPrice = mPrice;
         this.mImageUrl = mImageUrl;
+        this.mWebsiteLink = mWebsiteLink;
     }
 
     public String getmName() {
@@ -75,4 +77,13 @@ public class Makeup {
     public void setmImageUrl(String mImageUrl) {
         this.mImageUrl = mImageUrl;
     }
+
+    public String getmWebsiteLink() {
+        return mWebsiteLink;
+    }
+
+    public void setmWebsiteLink(String mWebsiteLink) {
+        this.mWebsiteLink = mWebsiteLink;
+    }
 }
+

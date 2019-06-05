@@ -59,4 +59,20 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="607dp" />
 
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="152dp"
+        android:layout_height="33dp"
+        android:layout_alignBottom="@id/skincareButton"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginBottom="-292dp"
+        android:background="@color/accent"
+        android:text="sign Out"
+
+        android:textColor="@color/primary_dark"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="607dp" />
+
+
 </RelativeLayout>

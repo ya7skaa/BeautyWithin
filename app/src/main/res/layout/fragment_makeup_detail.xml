@@ -2,18 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.beautywithin.ui.MakeupDetailFragment">
+    tools:context="com.example.beautywithin.adapters.MakeupDetailFragment">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primary">
+        android:background="@color/divider">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:id="@+id/restaurantImageView"
+            android:id="@+id/makeupImageView"
             android:src="@drawable/mak"
             android:scaleType="centerCrop" />
 
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product,Type"
-                android:id="@+id/makeupTextView"
+                android:id="@+id/categoryTextView"
                 android:layout_below="@+id/makeupNameTextView"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -71,49 +71,49 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_above="@+id/saveRestaurantButton"
+                android:layout_above="@+id/saveMakeupButton"
                 android:paddingLeft="30dp"
                 android:paddingTop="20dp"
                 android:paddingRight="30dp">
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="View on Yelp"-->
-                    <!--android:id="@+id/websiteTextView"-->
-                    <!--android:drawableLeft="@drawable/mak"-->
-                    <!--android:drawablePadding="4dp"-->
-                    <!--android:textColor="@color/icons"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:gravity="center" />-->
+                <TextView
+                    android:id="@+id/brandTextView"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/baseline_brush_24"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="Brand"
+                    android:textColor="@color/accent"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="(503) 223-1282"-->
-                    <!--android:id="@+id/phoneTextView"-->
-                    <!--android:drawableLeft="@drawable/mak"-->
-                    <!--android:drawablePadding="4dp"-->
-                    <!--android:textColor="@color/icons"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:gravity="center"/>-->
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="313dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/baseline_description_24"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="Description"
+                    android:textColor="@color/accent"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="colorpop"-->
-                    <!--android:drawableLeft="@drawable/mak"-->
-                    <!--android:drawablePadding="4dp"-->
-                    <!--android:id="@+id/makeupNameTextView"-->
-                    <!--android:textColor="@color/icons"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:gravity="center_vertical"/>-->
+                <TextView
+                    android:id="@+id/linkTextView"
+                    android:layout_width="318dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/baseline_insert_link_24"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="link"
+                    android:textColor="@color/accent"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -121,7 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Save Product"
-                android:id="@+id/saveRestaurantButton"
+                android:id="@+id/saveMakeupButton"
                 android:layout_alignParentBottom="true"
                 android:background="@color/accent"
                 android:textColor="@color/icons"
