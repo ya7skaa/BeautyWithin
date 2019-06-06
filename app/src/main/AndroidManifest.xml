@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SavedMakeupListActivity"></activity>
-        <activity android:name=".ui.MakeupDetailActivity" />
+        <!--<activity android:name=".ui.SavedMakeupListActivity"></activity>-->
+        <!--<activity android:name=".ui.MakeupDetailActivity" />-->
         <activity android:name=".ui.MakeupListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -26,11 +26,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.beautywithin.ui.HomeActivity" />
         </activity>
+
         <activity android:name=".ui.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.beautywithin.ui.signUpActivity" />
+                android:value="com.example.beautywithin.ui.signUpActivity" /></activity>
+
+        <activity android:name=".ui.SavedMakeupListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.beautywithin.ui.HomeActivity" /></activity>
+        <activity android:name=".ui.MakeupDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.beautywithin.ui.HomeActivity" />
         </activity>
+
         <activity
             android:name=".ui.MainActivity"
             android:theme="@style/NoActionBarTheme">

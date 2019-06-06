@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-10dp"
         android:src="@drawable/home" />
 
     <TextView
@@ -31,68 +31,69 @@
 
     <Button
         android:id="@+id/makeUpButton"
-        android:layout_width="146dp"
-        android:layout_height="37dp"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="134dp"
-        android:layout_marginRight="134dp"
-        android:layout_marginBottom="380dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="135dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginBottom="454dp"
         android:background="@color/accent"
         android:text="MAKE-UP"
-        android:textColor="@color/icons"
+
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="519dp" />
 
     <Button
         android:id="@+id/skincareButton"
-        android:layout_width="142dp"
-        android:layout_height="36dp"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="134dp"
-        android:layout_marginRight="134dp"
-        android:layout_marginBottom="313dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:layout_marginBottom="386dp"
         android:background="@color/accent"
         android:text="SKINCARE"
-        android:textColor="@color/icons"
+
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="607dp" />
 
     <Button
         android:id="@+id/signUpButton"
-        android:layout_width="152dp"
-        android:layout_height="33dp"
-        android:layout_alignBottom="@id/skincareButton"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginBottom="-295dp"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/skincareButton"
+        android:layout_alignLeft="@+id/skincareButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="443dp"
         android:background="@color/accent"
-        android:text="sign Out"
-        android:textColor="@color/icons" />
+        android:text="sign Out" />
 
     <Button
         android:id="@+id/savedMakeupButton"
-        android:layout_width="185dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/signUpButton"
-        android:layout_alignRight="@+id/signUpButton"
+        android:layout_alignEnd="@+id/skincareButton"
+        android:layout_alignRight="@+id/skincareButton"
         android:layout_alignBottom="@+id/skincareButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginEnd="-28dp"
-        android:layout_marginRight="-28dp"
-        android:layout_marginBottom="-217dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginLeft="94dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="-68dp"
         android:background="@color/colorAccent"
-        android:text="My Saved Products"
-        android:textColor="@color/icons"
-        android:visibility="visible" />
-
-        android:textColor="@color/primary_dark"
+        android:text="Saved Products"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="607dp" />
 
