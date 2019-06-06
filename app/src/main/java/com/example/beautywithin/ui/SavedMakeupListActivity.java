@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.example.beautywithin.Constants;
 import com.example.beautywithin.R;
 import com.example.beautywithin.adapters.FirebaseMakeupViewHolder;
 import com.example.beautywithin.models.Makeup;
+import com.example.beautywithin.util.OnStartDragListener;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -21,10 +23,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SavedMakeupListActivity extends AppCompatActivity {
+public class SavedMakeupListActivity extends AppCompatActivity implements OnStartDragListener {
 
     private DatabaseReference mMakeupReference;
     private FirebaseRecyclerAdapter<Makeup, FirebaseMakeupViewHolder> mFirebaseAdapter;
+    private ItemTouchHelper mitemTouchHelper;
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
 
@@ -79,4 +82,8 @@ public class SavedMakeupListActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onStartDrag(RecyclerView.ViewHolder viewHolder) {
+        mitemTouchHelper.startDrag(viewHolder);
+    }
 }

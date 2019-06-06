@@ -12,6 +12,7 @@ public class Makeup {
     private String mPrice;
     private String mImageUrl;
     private String mWebsiteLink;
+    String index;
 
     public Makeup() {
     }
@@ -25,6 +26,7 @@ public class Makeup {
         this.mPrice = mPrice;
         this.mImageUrl = mImageUrl;
         this.mWebsiteLink = mWebsiteLink;
+        this.index = "not_specified";
     }
 
     public String getmName() {
@@ -89,6 +91,14 @@ public class Makeup {
 
     public void setmWebsiteLink(String mWebsiteLink) {
         this.mWebsiteLink = mWebsiteLink;
+    }
+
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
     }
 }
 

@@ -2,6 +2,7 @@ package com.example.beautywithin.ui;
 import okhttp3.Call;
 import okhttp3.Callback;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,7 @@ import butterknife.ButterKnife;
 import okhttp3.Response;
 
 public class MakeupListActivity extends AppCompatActivity {
+    ProgressDialog progressDialog;
 
     private ArrayList<Makeup> makeups = new ArrayList<>();
     public static final String TAG = MakeupListActivity.class.getSimpleName();
@@ -35,6 +37,7 @@ public class MakeupListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_makeup);
 
         ButterKnife.bind(this);
+        createProgressDialog();
 
         getMakeup();
 
@@ -42,6 +45,7 @@ public class MakeupListActivity extends AppCompatActivity {
 
     }
     private void getMakeup() {
+        progressDialog.show();
         final MakeupService makeupService = new MakeupService ();
 
         makeupService.makeups(new Callback() {
@@ -64,11 +68,18 @@ public class MakeupListActivity extends AppCompatActivity {
                                 new LinearLayoutManager(MakeupListActivity.this);
                         mRecyclerView.setLayoutManager(layoutManager);
                         mRecyclerView.setHasFixedSize(true);
-
+                        progressDialog.hide();
                         System.out.println(makeups);
                     }
                 });
             }
         });
+    }
+
+    private void createProgressDialog() {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Loading...");
+        progressDialog.setMessage("Fetching Data...");
+        progressDialog.setCancelable(false);
     }
 }

@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.beautywithin.models.Makeup;
+import com.example.beautywithin.ui.MakeupDetailFragment;
 
 import java.util.ArrayList;
 

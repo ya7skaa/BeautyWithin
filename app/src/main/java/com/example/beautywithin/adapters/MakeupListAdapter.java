@@ -55,9 +55,6 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
             @BindView(R.id.makeupNameTextView) TextView mNameTextView;
             @BindView(R.id.categoryTextView) TextView mCategoryTextView;
             @BindView(R.id.priceTextView) TextView mPriceTextView;
-//            @BindView(R.id.descriptionTextView)TextView mDescriptionTextView;
-//            @BindView(R.id.brandTextView)TextView mBrandTextView;
-//            @BindView(R.id.linkTextView)TextView mLinkTextView;
 
             private Context mContext;
 
@@ -84,9 +81,7 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
             mCategoryTextView.setText(makeup.getmProductType());
 
             mPriceTextView.setText(String.format("%s $", makeup.getmPrice()));
-//            mBrandTextView.setText(makeup.getmBrand());
-//            mDescriptionTextView.setText(makeup.getmDescription());
-//            mLinkTextView.setText(makeup.getmWebsiteLink());
+
 
             }
     }

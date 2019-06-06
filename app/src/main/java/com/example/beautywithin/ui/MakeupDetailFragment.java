@@ -1,4 +1,4 @@
-package com.example.beautywithin.adapters;
+package com.example.beautywithin.ui;
 
 
 import android.os.Bundle;

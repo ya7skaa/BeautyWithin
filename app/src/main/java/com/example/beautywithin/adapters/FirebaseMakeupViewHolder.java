@@ -26,6 +26,8 @@ public class FirebaseMakeupViewHolder  extends RecyclerView.ViewHolder implement
     View mView;
     Context mContext;
 
+    public ImageView makeupImageView;
+
     public FirebaseMakeupViewHolder(View itemView) {
         super(itemView);
         mView = itemView;
@@ -34,10 +36,10 @@ public class FirebaseMakeupViewHolder  extends RecyclerView.ViewHolder implement
     }
 
     public void bindMakeup(Makeup makeup) {
-        ImageView makeupImageView = (ImageView) mView.findViewById(R.id.makeupImageView);
+        makeupImageView = (ImageView) mView.findViewById(R.id.makeupImageView);
         TextView nameTextView = (TextView) mView.findViewById(R.id.makeupNameTextView);
         TextView categoryTextView = (TextView) mView.findViewById(R.id.categoryTextView);
-        TextView ratingTextView = (TextView) mView.findViewById(R.id.ratingTextView);
+
 
         Picasso.get().load(makeup.getmImageUrl()).into(makeupImageView);
 
