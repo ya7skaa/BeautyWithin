@@ -68,10 +68,10 @@
         android:layout_marginTop="350dp"
         android:layout_marginBottom="-292dp"
         android:background="@color/accent"
-        android:text="sign Out"
+        android:text="sign Out" />
 
     <Button
-        android:id="@+id/savedRestaurantsButton"
+        android:id="@+id/savedMakeupButton"
         android:layout_width="152dp"
         android:layout_height="25dp"
         android:layout_alignEnd="@+id/signUpButton"

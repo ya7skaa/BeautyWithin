@@ -23,11 +23,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+
     @BindView(R.id.makeUpButton) Button mmakeUpButton;
     @BindView(R.id.skincareButton) Button mskincareButton;
 
     @BindView(R.id.signUpButton) Button msignUpButton;
+
+    @BindView(R.id.savedMakeupButton) Button mSavedMakeupButton;
 
     private static final int MY_REQUEST_CODE =7000 ;
     List<AuthUI.IdpConfig> providers;
@@ -55,6 +58,8 @@ public class HomeActivity extends AppCompatActivity {
 
 
         ButterKnife.bind(this);
+
+        mSavedMakeupButton.setOnClickListener(this);
 
         mmakeUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,4 +137,11 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v == mSavedMakeupButton) {
+            Intent intent = new Intent(HomeActivity.this, SavedMakeupListActivity.class);
+            startActivity(intent);
+        }
+    }
 }
