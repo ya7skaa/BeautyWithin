@@ -57,4 +57,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.9'
     implementation 'org.parceler:parceler-api:1.1.12'
     annotationProcessor 'org.parceler:parceler:1.1.12'
+    implementation 'com.firebaseui:firebase-ui-database:3.3.1'
 }
