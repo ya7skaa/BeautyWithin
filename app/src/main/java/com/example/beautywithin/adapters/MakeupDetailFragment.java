@@ -8,10 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.beautywithin.Constants;
 import com.example.beautywithin.R;
 
 import com.example.beautywithin.models.Makeup;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 
@@ -22,7 +26,7 @@ import org.parceler.Parcels;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
- public class MakeupDetailFragment extends Fragment {
+ public class MakeupDetailFragment extends Fragment  implements View.OnClickListener  {
      @BindView(R.id.makeupImageView) ImageView mImageLabel;
      @BindView(R.id.makeupNameTextView) TextView mNameLabel;
      @BindView(R.id.categoryTextView) TextView mProductCategoryLabel;
@@ -66,8 +70,19 @@ import butterknife.ButterKnife;
         mWebsiteLinkLabel.setText( mMakeup.getmWebsiteLink());
         mDescriptionLabel.setText( mMakeup.getmDescription());
 
-
+        mSaveMakeupButton.setOnClickListener(this);
         return view;
     }
+     @Override
+     public void onClick(View v) {
+
+         if (v == mSaveMakeupButton) {
+             DatabaseReference restaurantRef = FirebaseDatabase
+                     .getInstance()
+                     .getReference(Constants.FIREBASE_MAKEUP);
+             restaurantRef.push().setValue(mMakeup);
+             Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+         }
+     }
 
 }
