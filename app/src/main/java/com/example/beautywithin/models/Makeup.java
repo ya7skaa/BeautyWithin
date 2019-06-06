@@ -1,5 +1,8 @@
 package com.example.beautywithin.models;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Makeup {
     private String mName;
     private String mProductType;
@@ -10,8 +13,10 @@ public class Makeup {
     private String mImageUrl;
     private String mWebsiteLink;
 
+    public Makeup() {
+    }
 
-    public Makeup(String mName, String mProductType, String mProductCategory, String mBrand, String mDescription, String mPrice, String mImageUrl,String mWebsiteLink) {
+    public Makeup(String mName, String mProductType, String mProductCategory, String mBrand, String mDescription, String mPrice, String mImageUrl, String mWebsiteLink) {
         this.mName = mName;
         this.mProductType = mProductType;
         this.mProductCategory = mProductCategory;

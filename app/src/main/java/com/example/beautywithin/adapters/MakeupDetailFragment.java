@@ -60,11 +60,11 @@ import butterknife.ButterKnife;
         Picasso.get().load(mMakeup.getmImageUrl()).into(mImageLabel);
 
         mNameLabel.setText(mMakeup.getmName());
-        mProductCategoryLabel.setText(android.text.TextUtils.join(", ", mMakeup.getmProductCategory());
+        mProductCategoryLabel.setText( mMakeup.getmProductCategory());
 
         mbrandLabel.setText(mMakeup.getmBrand());
-        mWebsiteLinkLabel.setText(android.text.TextUtils.join(", ", mMakeup.getmWebsiteLink()));
-        mDescriptionLabel.setText(android.text.TextUtils.join(",", mMakeup.getmDescription()));
+        mWebsiteLinkLabel.setText( mMakeup.getmWebsiteLink());
+        mDescriptionLabel.setText( mMakeup.getmDescription());
 
 
         return view;

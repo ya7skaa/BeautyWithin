@@ -26,19 +26,20 @@ public class MakeupService {
             JSONArray makeupJSON = new JSONArray(jsonData);
             //JSONArray resultsJSON =  makeupJSON.getJSONArray();
             if (response.isSuccessful()) {
-                for (int i = 0; i < makeupJSON.length(); i++) {
+                for (int i = 0; i < 100; i++) {
                     JSONObject makeupsJSON = makeupJSON.getJSONObject(i);
                     String name = makeupsJSON.getString("name");
                     String product = makeupsJSON.getString("product_type");
                     String brand = makeupsJSON.getString("brand");
                     String category = makeupsJSON.getString("category");
-                    //String rating = makeupsJSON.getString("rating");
                     String description = makeupsJSON.getString("description");
                     String price = makeupsJSON.getString("price");
                     String imageUrl = makeupsJSON.getString("image_link");
+                   String websiteLink = makeupsJSON.getString("website_link");
 
 
-                    Makeup makeup = new Makeup(name,product, brand, category, description, price, imageUrl);
+
+                    Makeup makeup = new Makeup(name,product, brand, category, description, price, imageUrl,websiteLink);
                     makeups.add(makeup);
                 }
 

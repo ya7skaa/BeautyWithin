@@ -26,9 +26,9 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
     private Context mContext;
 
 
-    public MakeupListAdapter(Context context, ArrayList<Makeup> restaurants) {
+    public MakeupListAdapter(Context context, ArrayList<Makeup> makeups) {
         mContext = context;
-        mmakeups = restaurants;
+        mmakeups = makeups;
     }
 
     @Override
@@ -55,9 +55,9 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
             @BindView(R.id.makeupNameTextView) TextView mNameTextView;
             @BindView(R.id.categoryTextView) TextView mCategoryTextView;
             @BindView(R.id.priceTextView) TextView mPriceTextView;
-            @BindView(R.id.descriptionTextView)TextView mDescriptionTextView;
-            @BindView(R.id.brandTextView)TextView mBrandTextView;
-            @BindView(R.id.linkTextView)TextView mLinkTextView;
+//            @BindView(R.id.descriptionTextView)TextView mDescriptionTextView;
+//            @BindView(R.id.brandTextView)TextView mBrandTextView;
+//            @BindView(R.id.linkTextView)TextView mLinkTextView;
 
             private Context mContext;
 
@@ -74,19 +74,19 @@ public class MakeupListAdapter extends RecyclerView.Adapter<MakeupListAdapter.Ma
                 int itemPosition = getLayoutPosition();
                 Intent intent = new Intent(mContext, MakeupDetailActivity.class);
                 intent.putExtra("position", itemPosition);
-                intent.putExtra("restaurants", Parcels.wrap(mmakeups));
+                intent.putExtra("makeups", Parcels.wrap(mmakeups));
                 mContext.startActivity(intent);
             }
 
             public void bindMakeup(Makeup makeup) {
-                Picasso.get().load(makeup.getmImageUrl()).into(mMakeupImageView);
+                Picasso.get().load(makeup.getmImageUrl()).resize(40,40).into(mMakeupImageView);
                 mNameTextView.setText(makeup.getmName());
             mCategoryTextView.setText(makeup.getmProductType());
 
             mPriceTextView.setText(String.format("%s $", makeup.getmPrice()));
-            mBrandTextView.setText(makeup.getmBrand());
-            mDescriptionTextView.setText(makeup.getmDescription());
-            mLinkTextView.setText(makeup.getmWebsiteLink());
+//            mBrandTextView.setText(makeup.getmBrand());
+//            mDescriptionTextView.setText(makeup.getmDescription());
+//            mLinkTextView.setText(makeup.getmWebsiteLink());
 
             }
     }
