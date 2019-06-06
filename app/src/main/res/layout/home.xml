@@ -70,6 +70,25 @@
         android:background="@color/accent"
         android:text="sign Out"
 
+    <Button
+        android:id="@+id/savedRestaurantsButton"
+        android:layout_width="152dp"
+        android:layout_height="25dp"
+        android:layout_alignEnd="@+id/signUpButton"
+        android:layout_alignRight="@+id/signUpButton"
+        android:layout_alignBottom="@+id/skincareButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginLeft="121dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="-231dp"
+        android:background="@color/colorAccent"
+        android:text="My Saved Products"
+        android:textColor="@color/accent"
+        android:visibility="visible" />
+
         android:textColor="@color/primary_dark"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="607dp" />

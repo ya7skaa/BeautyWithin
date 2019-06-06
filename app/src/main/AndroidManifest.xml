@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MakeupDetailActivity"></activity>
+        <activity android:name=".ui.SavedMakeupListActivity"></activity>
+        <activity android:name=".ui.MakeupDetailActivity" />
         <activity android:name=".ui.MakeupListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.beautywithin.ui.HomeActivity"></meta-data>
+                android:value="com.example.beautywithin.ui.HomeActivity" />
         </activity>
         <activity
             android:name=".ui.signUpActivity"
@@ -23,12 +24,12 @@
         <activity android:name=".ui.SkincareActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.beautywithin.ui.HomeActivity"></meta-data>
+                android:value="com.example.beautywithin.ui.HomeActivity" />
         </activity>
         <activity android:name=".ui.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.beautywithin.ui.signUpActivity"></meta-data>
+                android:value="com.example.beautywithin.ui.signUpActivity" />
         </activity>
         <activity
             android:name=".ui.MainActivity"
